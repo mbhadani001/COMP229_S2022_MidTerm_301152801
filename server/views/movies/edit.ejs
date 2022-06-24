@@ -1,0 +1,86 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Name : Manav Rajeshbhai Bhadani
+    Student I'd : 301152801
+    Project : Midterm-test-->
+
+
+<!-- Content for the Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="titleTextField">Movie Title</label>
+                    <input type="text" class="form-control"
+                    id="TitleTextField"
+                    placeholder="Add your movie title"
+                    name="title"
+                    value="<% list.title %> "
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">Description</label>
+                    <textarea type="text" class="form-control"
+                    id="descriptionTextArea"
+                    placeholder="Enter the a brief description of the movie"
+                    name="description" 
+                    value="<% list.description %> "
+                    required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="releasedTextField">Released</label>
+                    <input type="text" class="form-control"
+                    id="releasedTextField"
+                    placeholder="Enter the Year of Released"
+                    name="released"
+                    value="<% list.released %> "
+                     required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="directorTextField">Director</label>
+                    <input type="text" class="form-control"
+                    id="directorTextField"
+                    placeholder="Enter movie's Director name"
+                    name="director"
+                    value="<% list.director %> "
+                     required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">Genre</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Enter the Book's Price"
+                    name="price"
+                    value="<% list.genre %> "
+                     required>
+                </div>
+
+               
+                   <!--Submit button-->
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+
+                   <!-- Cancel button-->
+
+                    <a href="/movies" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<%- include ../partials/footer.ejs %>
